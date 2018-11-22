@@ -14,17 +14,19 @@ public class  NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         // Create a list of words
-        ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("one", "lutti"));
-        words.add(new Word("two", "otiiko"));
-        words.add(new Word("three", "tolookosu"));
-        words.add(new Word("four", "oyyisa"));
-        words.add(new Word("five", "massokka"));
-        words.add(new Word("six", "temmokka"));
-        words.add(new Word("seven", "kenekaku"));
-        words.add(new Word("eight", "kawinta"));
-        words.add(new Word("nine", "wo’e"));
-        words.add(new Word("ten", "na’aacha"));
+     ArrayList<Word> numbers = new ArrayList<Word>();
+        numbers.add(new Word("one", "lutti", R.drawable.number_one));
+        numbers.add(new Word("two", "otiiko", R.drawable.number_two));
+        numbers.add(new Word("three", "tolookosu", R.drawable.number_three));
+        numbers.add(new Word("four", "oyyisa", R.drawable.number_four));
+        numbers.add(new Word("five", "massokka", R.drawable.number_five));
+        numbers.add(new Word("six", "temmokka", R.drawable.number_six));
+        numbers.add(new Word("seven", "kenekaku", R.drawable.number_seven));
+        numbers.add(new Word("eight", "kawinta", R.drawable.number_eight));
+        numbers.add(new Word("nine", "wo’e", R.drawable.number_nine));
+        numbers.add(new Word("ten", "na’aacha", R.drawable.number_ten));
+        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
+        //
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
