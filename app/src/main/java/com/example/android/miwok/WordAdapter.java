@@ -13,6 +13,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
+        private int mColorResourceId;
+
 
 
     public WordAdapter(Activity context, ArrayList<Word> words) {
@@ -21,6 +23,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0.
         super(context, 0, words);
+        mColorResourceId=colorResourceId;
+
     }
 
 
@@ -57,12 +61,18 @@ public class WordAdapter extends ArrayAdapter<Word> {
         else{
                         imageView.setVisibility(View.GONE);
         }
+        
+        
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
+        
+         View textContainer =listItemView.findViewById(R.id.text_container);
+        int color=ContextCompat.getColor(getContext(),mColorResourceId);
+        textContainer.setBackgroundColor(color);
         return listItemView;
     }
 
